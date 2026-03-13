@@ -1,0 +1,11 @@
+packages:
+  "framer-motion": "For smooth scroll animations and page transitions to make the site feel premium"
+  "react-hook-form": "For robust contact form handling and validation"
+  "@hookform/resolvers": "Zod integration for form validation"
+  "zod": "Schema validation for the contact form"
+
+images: []
+
+notes:
+  - All original images are loaded from the external HTTP URLs provided in the prompt.
+  - The contact form simulates a submission since no backend API is provided for sending emails.

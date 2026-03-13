@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "LG Mower Services"
+version = "1.0.0"
+id = "artifacts/lg-mower-services"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 23112
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/lg-mower-services run dev"
+
+[services.env]
+PORT = "23112"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/lg-mower-services", "run", "build"]
+publicDir = "artifacts/lg-mower-services/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
